@@ -58,6 +58,7 @@ a:hover {
 }
 
 body {
+  overflow-x: hidden;
   display: block;
   font-family: 'IBM Plex Serif', serif;
   background-color: whitesmoke;
