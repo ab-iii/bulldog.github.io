@@ -2,7 +2,7 @@
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (min-width: 651px) {
   body {
-    font-size: 22px;
+    font-size: 20px;
   }
   img.title {
       height:2.5em;
@@ -65,7 +65,7 @@ body {
   margin-right: auto;
   text-align: left;
   width: 90%;
-  max-width: 1000px;
+  max-width: 900px;
   line-height: 1.6;
 }
 
