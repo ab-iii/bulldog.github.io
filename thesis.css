@@ -1,0 +1,136 @@
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 651px) {
+  body {
+    font-size: 25px;
+  }
+  img.title {
+      height:2.5em;
+  }
+
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 650px) {
+body {
+    font-size: 16px;
+  }
+  img.title {
+      height:auto;
+      width: 100%;
+    }
+}
+
+
+::selection {
+  background: #ff885c; /* WebKit/Blink Browsers */
+}
+
+
+a {
+  color: mediumblue;
+  text-decoration: none;
+}
+a:hover {
+  color: orangered;
+}
+.lex {
+  color: #731f00;
+  text-decoration: none;
+}
+.lex2 {
+  font-weight: bold;
+  color: #731f00;
+  text-decoration: none;
+}
+.titl {
+  margin-bottom: 0.5em;
+}
+
+#biblio {
+  text-align: left;
+  line-height: 2;
+}
+#lexique {
+  text-align: left;
+}
+
+body {
+  display: block;
+  font-family: 'IBM Plex Serif', serif;
+  background-color: whitesmoke;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  width: 90%;
+  max-width: 1300px;
+  line-height: 1.6;
+}
+
+h1 {
+  margin: 0;
+  padding: none;
+  color: black;
+  text-align: center;
+  font-family: 'IBM Plex Serif', serif;
+
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+
+.btitle  {
+  text-decoration: none;
+}
+
+.dex {
+  display: block;
+  outline: 0.15em outset #DFD8D0;
+  margin-top: 5em;
+  margin-bottom: 4em;
+  padding-bottom: 1em;
+  width: fit-content;
+  padding: 1.5em;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: lightgray
+}
+ul.index {
+  padding-left: 0;
+  text-align: center;
+  list-style-type: none;
+}
+.niche{
+  margin-top: 0.8em;
+  width: 30%;
+  outline: 0.1em outset #DFD8D0;
+}
+
+
+
+.sect {
+  margin-bottom: 8em;
+}
+
+.title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.5;
+  margin-bottom: 1.5em;
+  max-width: 100%;
+
+  * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+
+}

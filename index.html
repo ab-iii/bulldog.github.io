@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<title>Suis-je un bulldog anglais ?</title>
+<style>
+@font-face {
+    font-family: "mino";
+    src: url(mino.ttf) format("truetype");
+}
+
+@media screen and (min-width: 651px) {
+  .modal-content {
+    width:30vw;
+  }
+  .flex-container p{
+  position: relative;
+  text-align: center;
+  line-height: 1vw;
+  font-size: 2vw;
+}
+.close {
+  position: absolute;
+  left: 96.1%;
+  top: -0.8%;
+  font-family: sans-serif;
+  color: dimgray;
+  font-size: 2vw;
+  font-weight: regular;
+}
+.flex-container{
+  position: relative;
+  display: block;
+  margin-top: 0.7vw;
+}
+
+  .flex-container img{
+    width: 100%;
+  }
+.modal-content {
+  background-color: darkgray;
+  margin: auto;
+  padding: 1.5vw;
+  outline: 0.2vw outset #DFD8D0;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  .eyes{
+    display: flex;
+    position: absolute;
+    top: 22.7%;
+    left: 32.9%;
+}
+
+.eyes .eye{
+    position: relative;
+    width: 3.75vw;
+    height: 3.75vw;
+    display: block;
+    background: white;
+    margin: 0 0.8vw;
+    border-radius: 50%
+}
+.eyes .eye::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 1.12vw;
+    transform: translate(-50%, -50%);
+    width: 1.9vw;
+    height: 1.9vw;
+    background: orangered;
+    border-radius: 50%
+}
+.colo {
+  line-height: 1.3vw;
+  font-size: 1.7vw;
+  position: absolute;
+  text-align: center;
+  width: 30vw;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.head {
+  width: 7.3vw;
+}
+.niche {
+  width: 5.13vw;
+  outline: 0.1vw outset #DFD8D0;
+}
+
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 650px) {
+.modal-content {
+    width: 90vw;
+  }
+  .flex-container p{
+  position: relative;
+  text-align: center;
+  line-height: 1vw;
+  font-size: 4vw;
+  }
+  .close {
+    position: absolute;
+    left: 95.7%;
+    top: -0.8%;
+    font-family: sans-serif;
+    color: dimgray;
+    font-size: 6vw;
+    font-weight: regular;
+  }
+  .flex-container{
+    position: relative;
+    display: block;
+    margin-top: 4.3vw;
+  }
+  .flex-container img{
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 4vw;
+  }
+  .modal-content {
+    background-color: darkgray;
+    margin: auto;
+    padding: 1.5vw;
+    outline: 0.6vw outset #DFD8D0;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .eyes{
+      display: flex;
+      position: absolute;
+      top: 22.7%;
+      left: 32.9%;
+  }
+
+  .eyes .eye{
+      position: relative;
+      width: 11.25vw;
+      height: 11.25vw;
+      display: block;
+      background: white;
+      margin: 0 2.4vw;
+      border-radius: 50%
+  }
+  .eyes .eye::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 3.36vw;
+      transform: translate(-50%, -50%);
+      width: 5.7vw;
+      height: 5.7vw;
+      background: orangered;
+      border-radius: 50%
+  }
+  .colo {
+    line-height: 3.9vw;
+    font-size: 5.1vw;
+    position: absolute;
+    text-align: center;
+    width: 90vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .head {
+    width: 21.9vw;
+  }
+  .niche {
+    width: 15.39vw;
+    outline: 0.3vw outset #DFD8D0;
+  }
+
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 0; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: whitesmoke; /* Black w/ opacity */
+}
+::selection {
+  background: #ff885c; /* WebKit/Blink Browsers */
+}
+/* Modal Content */
+body {
+  font-family: 'IBM Plex Serif', serif;
+  background-color: whitesmoke;
+  position: relative;
+  cursor: default;
+}
+
+
+
+
+
+
+
+
+
+  .blink{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+  .face {
+    margin-top: 2vw;
+    position: relative;
+  }
+
+  .face img {
+    position: relative;
+    z-index: 1; /* Sit on top */
+    display: block;
+    width: 60%;
+    margin: auto;
+
+  }
+
+
+
+/* The Close Button */
+
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a {
+  color: mediumblue;
+  text-decoration: none;
+}
+a:hover {
+  color: orangered;
+}
+.center {
+  position: fixed; /* Stay in place */
+  padding-top: 0; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: whitesmoke; /* Black w/ opacity */
+}
+
+button{
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <div class="flex-container">
+        <img src="dog.svg" alt="">
+        <div class="face">
+            <img src="chien.png" alt="">
+            <div class="eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+      </div>
+        <p>peut-être.</p>
+        <p class="blink">☛<a href="thesis.html"><b>CLIQUE POUR SAVOIR</b></a>☚</p>
+    </div>
+  </div>
+</div>
+<div class="center">
+  <div class="colo">
+    <p>Option Re/production</p>
+    <img class="head" src="head.png" alt="">
+    <p>Sous la direction de Fabienne Radi</p>
+    <p>Internet, décembre 2021</p>
+    <button id="myBtn" type="button" name="button"><img class="niche" src="niche.png" alt=""></button>
+  </div>
+</div>
+<button type="button" name="button"></button>
+
+
+
+<script>
+document.querySelector("body").addEventListener("mousemove", eyeball);
+
+function eyeball() {
+    'use strict';
+    var eye = document.querySelectorAll(".eye");
+    eye.forEach(function (eye) {
+        let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2)
+        let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+        let radian = Math.atan2(event.pageX - x, event.pageY - y);
+        let rot = (radian * (180 / Math.PI) * -1) + 270;
+        eye.style.transform  = "rotate("+ rot +"deg)"
+    })
+}
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+window.onload = function() {
+        modal.style.display = "block";
+}
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
