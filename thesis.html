@@ -11,9 +11,21 @@
 
 <style media="screen">
 /* Slideshow container */
+@media screen and (min-width: 651px) {
+  .slideshow-container {
+    width: 60%;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 650px) {
+  .slideshow-container {
+    width: 90%;
+  }
+}
+
 .slideshow-container {
   padding-top: 3em;
-  width: 80%;
   max-width: 1000px;
   position: relative;
   margin: auto;
